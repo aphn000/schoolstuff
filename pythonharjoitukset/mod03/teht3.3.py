@@ -1,8 +1,8 @@
 
 import math
-kanta = input("Anna suorakulmion kanta")
-korkeys = input("Anna suorakulmion korkeus")
-piiri = math kanta*2+korkeys*2
-pinta_ala = math kanta*korkeys
-print("Suorakulmion piiri on", piiri) 
-print("Suorakulmion pinta-ala on", pinta_ala)
+kanta = float(input("Anna suorakulmion kanta "))
+korkeus = float(input("Anna suorakulmion korkeus "))
+piiri = 2*(kanta+korkeus)
+pinta_ala = kanta*korkeus
+print("Suorakulmion piiri on ", + piiri) 
+print("Suorakulmion pinta-ala on ", + pinta_ala)
