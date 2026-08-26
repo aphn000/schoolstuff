@@ -8,3 +8,5 @@ while True:
     else:
         lukujono.append (float(luku))
 
+print(lukujono, "Pienin", min, lukujono)
+print(lukujono, "Isoin", max, lukujono)
