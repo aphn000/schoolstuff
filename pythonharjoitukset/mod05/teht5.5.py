@@ -1,5 +1,4 @@
 print("Kerro salasana ja käyttäjätunnus.")
-kerrat = 0
 
 while kerrat < 5:
     kayttajatunnus = input("Anna käyttäjätunnus. ")
@@ -8,7 +7,11 @@ while kerrat < 5:
         print("Tervetuloa!")
         break
     else: 
-        print("Pääsy evätty. Yritä uudelleen.")
+        print("Yritä uudelleen.")
         kerrat +=1
+ else:
+    print:("Pääsy evätty.")
+ 
+
 
     
