@@ -12,14 +12,14 @@ else:
     print ("Tervetuloa peliin.")
     print ("Voit seurata peliin liittyviä asioitasi päävalikossa. Komennolla PELAAJA saat tiedot pelaajastasi. Komennolla SAAVUTUKSET saat tiedot saamistasi saavutuksista. Komennolla LOPETA peli päättyy.")
 
-paavalikko1 = "pelaaja".upper()
-paavalikko2 = "saavutukset".upper()
-paavalikko3 = "lopeta".upper()
+paavalikko1 = "PELAAJA".upper()
+paavalikko2 = "SAAVUTUKSET".upper()
+paavalikko3 = "LOPETA".upper()
 
 
 while True:
 
-    valinta = input("Kerro valintasi.")
+    valinta = input("Kerro valintasi.").upper()
     if valinta == paavalikko1:
         print("Pelaajan nimi on", nimi, "ja pelaajan ikä on", ika, ". Emme tiedä vielä muuta pelaajasta")
     elif valinta == paavalikko2: 
