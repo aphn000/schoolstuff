@@ -25,4 +25,8 @@
 -kaikki
 
 ## Moduuli 6
--
+-kaikki 
+
+## Moduuli 7 
+
+-1,2,3,4
