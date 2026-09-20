@@ -30,3 +30,11 @@
 ## Moduuli 7 
 
 -1,2,3,4
+
+## Moduuli 8
+
+-1,2 
+
+## Moduuli 9
+
+-1
