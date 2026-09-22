@@ -31,11 +31,10 @@ class Talo:
     def aja_hissia(self, hissin_numero, kohdekerros):
         self.hissit[hissin_numero].siirry_kerrokseen(kohdekerros)
 
+    def palohalytys(self):
+        for hissi in self.hissit:
+            hissi.siirry_kerrokseen(hissi.alin)
 
-h = Hissi (1, 10)
-
-h.siirry_kerrokseen(5)
-h.siirry_kerrokseen(1)
 
 talo = Talo(1, 10, 3)
 
@@ -43,9 +42,8 @@ talo.aja_hissia(0, 5)
 talo.aja_hissia(1, 8)
 talo.aja_hissia(2, 3)
 
-talo.aja_hissia(0, 1)
-talo.aja_hissia(1, 1)
-talo.aja_hissia(2, 1)
+
+talo.palohalytys()
 
         
 
