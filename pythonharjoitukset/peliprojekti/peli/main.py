@@ -1,3 +1,11 @@
+
+from pelaaja import Pelaaja
+from huone import Huone
+from valikko import valinta
+
+
+
+
 nimi = input("Anna pelaajan nimi.")
 ika = int(input("Anna pelaajan ikä."))
 
