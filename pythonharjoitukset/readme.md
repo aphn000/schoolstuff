@@ -29,12 +29,20 @@
 
 ## Moduuli 7 
 
--1,2,3,4
+-1,2,3,4,5
 
 ## Moduuli 8
 
 -1,2 
 
 ## Moduuli 9
+
+-1,2,3
+
+## Moduuli 10
+
+-1,2,3
+
+## Moduuli 11
 
 -1

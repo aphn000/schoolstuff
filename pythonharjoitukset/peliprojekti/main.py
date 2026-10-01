@@ -56,3 +56,9 @@ while True:
     elif valinta == paavalikko4:
         print("Peli sammuu")
         break
+
+class Pelaaja:
+
+class Huone:
+
+class Esine:
