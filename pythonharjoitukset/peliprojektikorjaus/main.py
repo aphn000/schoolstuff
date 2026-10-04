@@ -78,6 +78,7 @@ def aloita_peli():
     koti = Huone("Koti")
     hesburger = Huone("Hesburger")
     puisto = Huone("Puisto")
+    
 
     koti.saavu()
 
@@ -104,6 +105,28 @@ def aloita_peli():
     else:
         print("Virheellinen valinta, valitse 1 tai 2.")
         return
+
+    input("Paina Enter jatkaaksesi pelissä")
+
+    puisto.saavu()
+
+    print("Näet kun joku tiputtaa roskan maahan puistossa.")
+    print("Nyt sinun täytyy tehdä tärkeä valinta.")
+    print("Valitse, aiotko heittää roskan roskiin vai jätätkö sen maahan.")
+
+    pelaajan_valinta = valinta(["Vien roskan roskiin", "Jätän roskan maahan"])
+
+    if pelaajan_valinta == "2":
+        pelaaja.havisit("Kompastuit kävellessäsi banaaninkuoreen ja hävisit pelin")
+        return
+    elif pelaajan_valinta == "1":
+        print("Teit oikean valinnan, onneksi olkoon.")
+        print("Pääset jatkamaan peliä")
+    else:
+        print("Virheellinen valinta, valitse 1 tai 2.")
+        return
+
+    
 
 if __name__ == "__main__":
     aloita_peli()

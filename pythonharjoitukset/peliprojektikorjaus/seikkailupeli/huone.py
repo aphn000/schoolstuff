@@ -3,7 +3,7 @@ class Huone:
         self.nimi = nimi
 
     def saavu(self):
-        print("Saavuit paikkaan: {self.nimi}")
+        print(f"Saavuit paikkaan: {self.nimi}")
 
     
 
