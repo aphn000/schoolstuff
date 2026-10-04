@@ -2,6 +2,9 @@
 from peliprojektikorjaus.seikkailupeli.pelaaja import Pelaaja
 from peliprojektikorjaus.seikkailupeli.huone import Huone
 from peliprojektikorjaus.seikkailupeli.valikko import valinta
+from peliprojektikorjaus.seikkailupeli import saavutukset
+from peliprojektikorjaus.seikkailupeli.saavutukset import syote
+
 
 def aloita_peli():
 
@@ -13,7 +16,7 @@ def aloita_peli():
     
     
 
-    nimi = input("Anna pelaajan nimi.")
+    nimi = syote("Anna pelaajan nimi.")
     ika = int(input("Anna pelaajan ikä."))
 
     pelaaja = Pelaaja(nimi,ika)
@@ -84,7 +87,7 @@ def aloita_peli():
 
     print("Heräät aamulla nälkäisenä ja kaipaat jotain rasvaista")
 
-    input("Paina Enter jatkaaksesi pelissä")
+    syote("Paina Enter jatkaaksesi pelissä")
 
     hesburger.saavu()
 
@@ -101,12 +104,13 @@ def aloita_peli():
     elif pelaajan_valinta == "2":
         print("Teit oikean päätöksen ottaessasi kasvishampurilaisen.")
         print("Pääset jatkamaan peliä!")
+        saavutukset.avaa("ilmastonpelastaja")
 
     else:
         print("Virheellinen valinta, valitse 1 tai 2.")
         return
 
-    input("Paina Enter jatkaaksesi pelissä")
+    syote("Paina Enter jatkaaksesi pelissä")
 
     puisto.saavu()
 
@@ -122,6 +126,7 @@ def aloita_peli():
     elif pelaajan_valinta == "1":
         print("Teit oikean valinnan, onneksi olkoon.")
         print("Pääset jatkamaan peliä")
+        saavutukset.avaa("siivoaja")
     else:
         print("Virheellinen valinta, valitse 1 tai 2.")
         return
