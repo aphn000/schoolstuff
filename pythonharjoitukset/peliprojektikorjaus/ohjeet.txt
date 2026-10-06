@@ -1,0 +1,3 @@
+Pelissä sinun täytyy tehdä kestävää kehitystä tukevia valintoja.
+Väärä valinta voi johtaa pelin häviämiseen.
+Oikeilla valinnoilla pääset etenemään pelissä.

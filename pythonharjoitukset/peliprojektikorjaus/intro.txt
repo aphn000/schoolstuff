@@ -1,0 +1,4 @@
+Tervetuloa seikkailupeliin.
+Tässä pelissä sinun täytyy viettää mukava vapaapäivä.
+Mutta se ei olekaan niin yksinkertaista...
+Sinun täytyy tehdä kestävää kehitystä edesauttavia ratkaisuja edetäksesi pelissä.
