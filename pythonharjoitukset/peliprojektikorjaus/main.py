@@ -81,10 +81,7 @@ def aloita_peli():
     hesburger = Huone("Hesburger")
     puisto = Huone("Puisto")
     metsa = Huone("Metsä")
-    
-
-
-
+    taisteluareena = Huone("taisteluareena")
 
     if vaihe == 1:
 
@@ -170,7 +167,7 @@ def aloita_peli():
             pelaaja.havisit("Laittomat hakkuut veivät rauhoitetulta eläinlajilta elinpaikan.")
             return
 
-        elif pelaajan_valinta == "2":
+        elif pelaajan_valinta == "1":
             print("Teit oikean valinnan")
             print("Metsän eläimet kiittävät sinua vastuullisesta teosta")
             saavutukset.avaa("metsiensankari")
@@ -182,8 +179,31 @@ def aloita_peli():
             print("Virheellinen valinta, valitse 1 tai 2")
             return
 
-        if vaihe == "5":
+    if vaihe == 5:
 
+        taisteluareena.saavu()
+
+        print("Olet saanut pidettyä elintapasi hyvin kestävän kehityksen mukaisina.")
+        print("Sinulla on kuitenkin vielä yksi vihollinen, aiemmin puistossa kohtaamasi roskaaja.")
+        print("Sinun on nyt valittava tarkkaan, jätätkö hänet rauhaan, heität häntä roskapussilla kostoksi vai kätteletkö häntä ja vältät konfliktin.")
+
+        if pelaajan_valinta == "1":
+            pelaaja.havisit("Hän pääsi jatkamaan roskaamista ja pilasi Suomen luonnon.")
+            return
+
+        elif pelaajan_valinta == "2":
+            pelaaja.havisit("Jouduit konfliktiin ja hän heitti sinut roskapönttöön, johon jäit jumiin.")
+            return
+
+        elif pelaajan_valinta == "3":
+            print("Vältit konfliktin, sekä pääsit puhumaan järkeä roskaajan päähän. Hän lopetti roskaamisen")
+            print("Voitit pelin, onneksi olkoon.")
+            saavutukset.avaa("voittaja")
+        else:
+            print("virheellinen valinta, valitse 1, 2 tai 3.")
+            return
+
+        
 
 
 
