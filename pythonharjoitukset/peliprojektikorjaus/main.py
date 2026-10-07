@@ -1,4 +1,3 @@
-
 from peliprojektikorjaus.seikkailupeli.pelaaja import Pelaaja
 from peliprojektikorjaus.seikkailupeli.huone import Huone
 from peliprojektikorjaus.seikkailupeli.valikko import valinta
@@ -20,7 +19,6 @@ def tallenna_peli(pelaaja, vaihe):
         tiedosto.write(str(pelaaja.ika) + "\n")
         tiedosto.write(str(vaihe) + "\n")
 
-
 def lataa_peli():
     polku = os.path.join(os.path.dirname(__file__), "tallennus.txt")
 
@@ -34,11 +32,43 @@ def lataa_peli():
 
     except FileNotFoundError:
         return None
-    
-                      
+
+def paavalikko():
+    while True:
+        print ("\nViikonloppu-seikkailupeli")
+        print("1. Aloita peli.")
+        print("2. Katso saavutukset")
+        print("3. Katso pelaajan tiedot")
+        print("4. Lopeta peli")      
+
+        valinta = input("Valitse: ")
+
+        if valinta == "1":
+            aloita_peli()
+        elif valinta == "2":
+            saavutukset.nayta()
+        elif valinta == "3":
+            tallennettu_peli = lataa_peli()
+
+            if tallennettu_peli is not None:
+                nimi, ika, vaihe = tallennettu_peli
+
+                print("\nPELAAJAN TIEDOT")
+                print("Nimi:", nimi)
+                print("Ikä:", ika)
+                print("Pelin vaihe:", vaihe)
+
+            else:
+                print("\nPelaasta ei löytynyt tallennusta.")
+
+        elif valinta == "4":
+            print("Lopetit pelin")
+            break
+
+        else:
+            print ("Virheellinen valinta. Valitse 1-4.")     
 
 def aloita_peli():
-
 
     print(lue_tiedosto("intro.txt"))
     print()
@@ -48,7 +78,7 @@ def aloita_peli():
 
     if tallennettu_peli is not None:
         print("Tallennettu peli löytyi.")
-        jatka = input("Haluatko jatkaa peliä? Vastaa joko kyllä tai ei ")
+        jatka = input("Haluatko jatkaa peliä? Vastaa joko kyllä tai ei. ")
 
         if jatka == "kyllä":
             nimi, ika, vaihe = tallennettu_peli
@@ -76,7 +106,6 @@ def aloita_peli():
         print("Hei ", nimi, "!")
         print("Tervetuloa peliin.")
     
-
     koti = Huone("Koti")
     hesburger = Huone("Hesburger")
     puisto = Huone("Puisto")
@@ -94,7 +123,6 @@ def aloita_peli():
 
         tallenna_peli(pelaaja, 2)
         vaihe = 2
-
 
     if vaihe == 2:
 
@@ -117,14 +145,12 @@ def aloita_peli():
 
             syote("Paina Enter jatkaaksesi pelissä")
 
-            tallenna_peli(pelaaja, 3)
-
             vaihe = 3
+            tallenna_peli(pelaaja, 3)
 
         else:
             print("Virheellinen valinta, valitse 1 tai 2.")
             return
-
 
     if vaihe == 3:
 
@@ -146,8 +172,9 @@ def aloita_peli():
 
             syote("Paina Enter jatkaaksesi pelissä")
 
-            tallenna_peli(pelaaja, 4)
             vaihe = 4
+            tallenna_peli(pelaaja, 4)
+            
         else:
             print("Virheellinen valinta, valitse 1 tai 2.")
             return
@@ -173,8 +200,9 @@ def aloita_peli():
             saavutukset.avaa("metsiensankari")
             syote("Paina enter jatkaaksesi pelisssä")
 
-            tallenna_peli(pelaaja, 5)
             vaihe = 5
+            tallenna_peli(pelaaja, 5)
+            
         else: 
             print("Virheellinen valinta, valitse 1 tai 2")
             return
@@ -186,6 +214,8 @@ def aloita_peli():
         print("Olet saanut pidettyä elintapasi hyvin kestävän kehityksen mukaisina.")
         print("Sinulla on kuitenkin vielä yksi vihollinen, aiemmin puistossa kohtaamasi roskaaja.")
         print("Sinun on nyt valittava tarkkaan, jätätkö hänet rauhaan, heität häntä roskapussilla kostoksi vai kätteletkö häntä ja vältät konfliktin.")
+
+        pelaajan_valinta = valinta(["Jätän hänet rauhaan", "Heitän häntä roskapussilla", "Kättelen häntä"])
 
         if pelaajan_valinta == "1":
             pelaaja.havisit("Hän pääsi jatkamaan roskaamista ja pilasi Suomen luonnon.")
@@ -203,9 +233,5 @@ def aloita_peli():
             print("virheellinen valinta, valitse 1, 2 tai 3.")
             return
 
-        
-
-
-
 if __name__ == "__main__":
-    aloita_peli()
+    paavalikko()
