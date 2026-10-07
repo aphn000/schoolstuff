@@ -48,7 +48,7 @@ def aloita_peli():
 
     if tallennettu_peli is not None:
         print("Tallennettu peli löytyi.")
-        jatka = input("Haluatko jatkaa peliä? Vastaa joko kyllä tai ei")
+        jatka = input("Haluatko jatkaa peliä? Vastaa joko kyllä tai ei ")
 
         if jatka == "kyllä":
             nimi, ika, vaihe = tallennettu_peli
@@ -81,6 +81,7 @@ def aloita_peli():
     hesburger = Huone("Hesburger")
     puisto = Huone("Puisto")
     metsa = Huone("Metsä")
+    
 
 
 
@@ -180,6 +181,10 @@ def aloita_peli():
         else: 
             print("Virheellinen valinta, valitse 1 tai 2")
             return
+
+        if vaihe == "5":
+
+
 
 
 if __name__ == "__main__":
