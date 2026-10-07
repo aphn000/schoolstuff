@@ -6,6 +6,7 @@ TIEDOSTO = "saavutukset.json"
 SAAVUUKSET =  {
     "ilmastonpelastaja": "Ilmaston pelastaja: tilasit kasvishampurilaisen.",
     "siivoaja": "Siivoaja: Siivosit roskia puistosta."
+    "metsiensankari": "Metsien sankari: Pelastit metsän eläimet laittomilta hakkuilta"
 }
 
 def lataa():

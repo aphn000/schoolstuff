@@ -80,6 +80,10 @@ def aloita_peli():
     koti = Huone("Koti")
     hesburger = Huone("Hesburger")
     puisto = Huone("Puisto")
+    metsa = Huone("Metsä")
+
+
+
 
     if vaihe == 1:
 
@@ -149,6 +153,34 @@ def aloita_peli():
         else:
             print("Virheellinen valinta, valitse 1 tai 2.")
             return
+
+    if vaihe == 4:
+
+        metsa.saavu()
+
+        print("Päätit mennä kansallispuistoon kävelemään ja nauttimaan Suomen uniikista luonnosta.")
+        print("Näet kuitenkin jotain kummaa.")
+        print("Metsäkoneet kaatavat hehtaareittain metsää laitonta datakeskusta varten.")
+        print("Nyt sinun täytyy valita, soitatko poliisit vai et.")
+
+        pelaajan_valinta = valinta(["Soitan poliisit", "Annan heidän jatkaa hakkuita" ])
+
+        if pelaajan_valinta == "2":
+            pelaaja.havisit("Laittomat hakkuut veivät rauhoitetulta eläinlajilta elinpaikan.")
+            return
+
+        elif pelaajan_valinta == "2":
+            print("Teit oikean valinnan")
+            print("Metsän eläimet kiittävät sinua vastuullisesta teosta")
+            saavutukset.avaa("metsiensankari")
+            syote("Paina enter jatkaaksesi pelisssä")
+
+            tallenna_peli(pelaaja, 5)
+            vaihe = 5
+        else: 
+            print("Virheellinen valinta, valitse 1 tai 2")
+            return
+
 
 if __name__ == "__main__":
     aloita_peli()

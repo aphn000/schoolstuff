@@ -14,6 +14,9 @@ valikko.py sisältää valinta-funktion, jolla näytetään valintavaihtoehdot j
 
 init.py tekee kansiosta paketin, jotta voidaan käyttää import-komentoa.
 
+saavutukset.py 
+
 __pycache__ en osaa selittää, se vaan ilmesty tuonne.
 
 Tällä hetkellä peli on pahasti vaiheessa. Pitäisi vissiin opetella ajankäyttöä vähän paremmin.
+
