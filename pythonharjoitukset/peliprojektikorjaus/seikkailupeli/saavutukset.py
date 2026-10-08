@@ -1,6 +1,6 @@
 import json
 
-
+#tiedosto, johon saavutukset tallennetaan
 TIEDOSTO = "saavutukset.json"
 
 SAAVUUKSET =  {
@@ -14,8 +14,10 @@ def lataa():
     try:
         with open (TIEDOSTO) as f:
             return json.load(f)
+        #avaa saavutustiedoston lukemiseen, muuttaa json tiedoston listaksi
     except FileNotFoundError:
         return[]
+    #lataa saavutukset json tiedostosta
 
 def avaa (saavutus_id):
     avatut = lataa()
@@ -32,7 +34,7 @@ def nayta():
         if saavutus_id in avatut:
             print("[x]", kuvaus)
         else:
-            print("[ ]???")
+            print("[ ], kuvaus")
 
 def syote(kysymys=""):
     vastaus = input(kysymys)

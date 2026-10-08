@@ -10,9 +10,13 @@ def lue_tiedosto(tiedostonimi):
 
     with open(polku, "r", encoding="utf-8") as tiedosto:
         return tiedosto.read()
+    #lukee annetun tekstitiedoston ja palauttaa sisällön merkkijonona
+    #muodostaa sijainnin perusteella tiedostolle polun
 
 def tallenna_peli(pelaaja, vaihe):
     polku = os.path.join(os.path.dirname(__file__), "tallennus.txt")
+
+    #tallentaa pelaaajan perustiedot ja nykyisen pelivaiheen
 
     with open(polku, "w", encoding="utf-8") as tiedosto:
         tiedosto.write(pelaaja.nimi + "\n")
@@ -21,6 +25,8 @@ def tallenna_peli(pelaaja, vaihe):
 
 def lataa_peli():
     polku = os.path.join(os.path.dirname(__file__), "tallennus.txt")
+
+    #lataa aiemmin  tallennetun pelin tiedot (tai None jos ei ole aiempaa tallennusta)
 
     try:
         with open(polku, "r", encoding="utf-8") as tiedosto:
@@ -112,6 +118,8 @@ def aloita_peli():
     metsa = Huone("Metsä")
     taisteluareena = Huone("taisteluareena")
 
+    #luo tapahtumapaikat Huone-luokan avulla
+
     if vaihe == 1:
 
         koti.saavu()
@@ -142,6 +150,7 @@ def aloita_peli():
             print("Teit oikean päätöksen ottaessasi kasvishampurilaisen.")
             print("Pääset jatkamaan peliä!")
             saavutukset.avaa("ilmastonpelastaja")
+            #oikea valinta avaa saavutuksen.
 
             syote("Paina Enter jatkaaksesi pelissä")
 
@@ -235,3 +244,4 @@ def aloita_peli():
 
 if __name__ == "__main__":
     paavalikko()
+    #varmistaa, että ohjelma toimii
