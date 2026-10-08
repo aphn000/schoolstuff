@@ -26,6 +26,6 @@ intro.txt sisältää pelin aloitustekstin
 ohjeet.txt sisältää pelinohjeet
 
 
-__pycache__ en osaa selittää, se vaan ilmesty tuonne.
+Peli liittyy kestävään kehitykseen pelin tarinan aiheilla.
 
 

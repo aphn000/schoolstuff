@@ -36,7 +36,7 @@ def lataa_peli():
 
         return nimi, ika, vaihe
 
-    except FileNotFoundError:
+    except (FileNotFoundError, ValueError):
         return None
 
 def paavalikko():

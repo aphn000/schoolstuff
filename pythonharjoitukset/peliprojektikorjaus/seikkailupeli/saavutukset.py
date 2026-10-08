@@ -20,7 +20,9 @@ def lataa():
     #lataa saavutukset json tiedostosta
 
 def avaa (saavutus_id):
+    print("AVAAMINEN:", saavutus_id)
     avatut = lataa()
+    print("AVATUT:", avatut)
     if saavutus_id not in avatut:
         avatut.append(saavutus_id)
         with open (TIEDOSTO, "w") as f:
