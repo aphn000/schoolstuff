@@ -244,4 +244,4 @@ def aloita_peli():
 
 if __name__ == "__main__":
     paavalikko()
-    #varmistaa, että ohjelma toimii
+    #varmistaa, että ohjelma toimii vaan kun se suoritetaan pääohjelmasta
