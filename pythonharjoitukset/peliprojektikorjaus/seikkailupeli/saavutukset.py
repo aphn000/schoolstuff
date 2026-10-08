@@ -26,6 +26,7 @@ def avaa (saavutus_id):
         with open (TIEDOSTO, "w") as f:
             json.dump(avatut, f)
         print("Sait saavutuksen: ", SAAVUUKSET[saavutus_id])
+        #funktio lisää pelaajalle uuden saavutuksen. Tarkistaa, onko saavutusta jo aiemmin saatu. Jos ei, lisää sen listaan.
 
 def nayta():
     avatut = lataa()
@@ -35,6 +36,8 @@ def nayta():
             print("[x]", kuvaus)
         else:
             print("[ ], kuvaus")
+#käy läpi saavutukset, jos saavutus on avattu: [x], jos ei niin [ ]
+        
 
 def syote(kysymys=""):
     vastaus = input(kysymys)
