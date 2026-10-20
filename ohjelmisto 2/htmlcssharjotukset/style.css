@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/Futura-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+body{
+    margin: 0;
+    font-family: "Futura", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+h1{
+    color: white;
+    padding: 10px;
+}
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: crimson;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+
+.topnav a.active {}
