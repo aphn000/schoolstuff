@@ -27,4 +27,4 @@ switch(number) {
 }
 
 document.getElementById("result").textContent =
-   `${name}, you are ${roomaa}.`;
+   `${name}, you are ${room}.`;
