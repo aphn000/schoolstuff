@@ -4,3 +4,4 @@ MOD1ja2
 -teht2 2p
 -teht3 3p
 -teht4 3p
+-teht5 3p
