@@ -1,3 +1,4 @@
+"usestrict"
 let year = parseInt(prompt("Enter a year:"), 10);
 
 function isLeapYear(year) {
