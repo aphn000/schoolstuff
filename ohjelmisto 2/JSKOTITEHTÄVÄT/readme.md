@@ -14,3 +14,5 @@ mod 3
 -teht 3 2p
 -teht 4 2p
 -teht 5 2p
+-teht 6 2p
+-teht 9 3p
